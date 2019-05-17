@@ -1,0 +1,61 @@
+7000	Determine Outcome	
+7000	Operational Architecture	
+7060	Determine Delegation Level for Approval	Based on dollar amount, type of app, type of applicant the group or person with authority to approve may differ.
+7100 	Establishing Selection Criteria	This is tied to a combination of the business domain and the type of award.  Types of awards include:
+Grants
+Benefits – Pension, Health Care Eligibility,
+Professional or Business License or Permit, Union Membership, Certification
+Limited Term Benefit Claim (Workers Comp, Unemployment Insurance
+7100	Selection Criteria Qualifying Score	The 6000 series does the evaluation that sets the score.  The 7000 uses the scores to determine if the threshold for eligibility is met.  Ideally, the evaluation process is conducted without knowing what qualifying score is required.  The qualifying score may require a minimum threshold in some or all categories, a total score across categories; simply meet a minimum (pass/fail) in some categories and then prioritize based on scores in other categories.
+The 7100 series calculates the aggregate and qualifying score based on the evaluation of individual components in 6000 series.
+Scores may have to be higher if there has been previous program participation.  
+There may be a maximum number of times a person can participant in the program.  
+		Each business domain will have its own scoring criteria and thresholds for one-time awards or ongoing benefit payment.  The portion of the data model and the functions specific to each domain do not need to be “genericized” to enable a one-size-fits-all pattern.  
+7100A	Grant Program	
+7100B	Professional License	
+7100C	Business License	
+7100D	Product License 	
+7100E	Land Use Authorization or Permit	
+7100F	Union Membership	
+7100G	Disability Benefit	
+7100H	Workers Comp Claim	
+7100J	Unemployment Insurance	
+7100K	Health Insurance Coverage Qualification	
+7100L	Handicap or Chronic Disease certification 	
+7100M	Gun or Concealed Weapon Permit	
+		
+		
+7200 	Determine Provisions to Offer	There may be tradeoffs in which provisions are offered.  A provision may be a limited period of coverage so that a renewal or inspection is required sooner such as a probationary status.
+
+7300	Adjustments	Adjustments are required for different reasons:
+Finalize a benefit payment after providing an interim amount until all data could be collected;
+New information changes the level of eligibility or calculations to determine the amount.
+An inspection determines a change in the award:  which may mean either a clawback or added payment;
+New conditions attached to the award such as changes in progress reporting, field inspections, new certifications.  
+
+The Adjustment process re-uses functionality already in place to calculate award amount, award notification, agreement, and financial interface.
+
+
+
+
+7310	Determine amount of revised or final award	This determination may use a combination of newly available information or use of a different formula.  Newly available information may have  been planned or unplanned.  Planned updates in information occur when an interim or temporary payment is made to get money to the recipient without waiting for a final, precise calculation.  This can be a conscious part of the overall process where it is know that some amount will be awarded and offering an approximate amount is offered pending final data for final calculations.
+7312	Determine amount paid to date	Any adjustment may require comparing the final monthly or one-time award to what has been paid on an interim basis.
+7314	Determine if adjustment is positive or negative	This is the calculation of the actual compared to the final determination.  The process for reconciling is different typically when the recipient was overpaid than if the recipient was under awarded.  
+7320	Pro rate negative adjustment	If the adjustment is negative for a periodic benefit amount, it can be appropriate to pro-rate the claw back.  For example, if $3000 has been over paid on a $1000 monthly payment, the overpaid amount can be recovered over 12 months by reducing the $1000 award to $750. 
+7330	Provide adjusted agreement based on change	The Award agreement will require amendment or re-writing to incorporate the adjustments.  Adjustments that are limited to reporting, inspections, or other conditions may not require rewriting if no change in dollars are involved.
+		
+7400	Prepare Offer	The applicant may be offered alternative proposals.  A benefit program may offer different amounts based on the duration; a loan may have different terms based on payback length; an insurance plan different premiums based on which provisions are selected or co-pays.
+7450	Submit offer to Applicant	Obviously there is a close link between the offer and submitting the offer to the Applicant.  
+7500	Applicant selects a Proposal Alternative	The Applicant may need to do a detailed analysis of options.  Although the simulation capability may have been offered during the application process, there may be greater detail at the time of the formal proposal so that running analysis with actuals is now needed.   
+7540	Applicant authorizes selected alternative	Authorizations are increasingly done through electronic signature.  The account used to submit may have sufficient authentication of identity to make return of the selected option sufficient but typically some type of signature is needed.  
+7480	Verify final alternative selected	Dates of eligibility, remaining dollars, other factors could impact the final disposition.  There may be a second round of eligibility verifications required based on the passage of time.
+7500	Maintain account balance	An award amount may go to a separate or internal accounting system to create an account receivable, reduce an encumbrance.  
+7520	Update Amount and conditions	If expedited approval and award made on interim information, then updates to data may be collected and lead to a modification to the final approval.  CalPERS retirement benefits at one time were done this way.
+7540	Perform Cross-checks	There may be a final verification of income, other resources, dependents, residence, licensures and other cross-checks required at the time the final agreement is reached.  
+7560	Approve Application	
+		
+7580	Request Wet Signature	The Applicant can print the approved application that will include a bar code.  
+
+7585	Submit Wet Signature	The newly approved candidate may be required to provide an original signature and mail the original or electronically submit a facsimile.
+7590	Process and Match hardcopy with electronic file	The returned, signed application with the bar code will be scanned to automate matching the imaged document with the electronic application.  Imaging done where a hardcopy is submitted.  Facsimile signatures submitted via email or fax or uploaded using the Candidate’s Account Management are scanned to match with the electronic application.   (Even though a softcopy is submitted via the Portal using the Candidate’s Account ID, the form is still scanned to verify the match to the application that was approved.
+7595	Issue certification	The newly completed application with signature prompts a response to the newly certified person via a combination of email, regular mail, or the account. The response includes the formal certification document.  If sent electronically the person may print it as well as save it for future needs.  Hospitals, medical groups and employers may require the certification.  May include ability to download a pdf to print.
